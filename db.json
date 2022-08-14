@@ -1,0 +1,15 @@
+{
+    "people": [
+        {   "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jupiter%2C_image_taken_by_NASA%27s_Hubble_Space_Telescope%2C_June_2019_-_Edited.jpg/938px-Jupiter%2C_image_taken_by_NASA%27s_Hubble_Space_Telescope%2C_June_2019_-_Edited.jpg",
+            "name": "name",
+            "age": "1"
+        },
+        {
+            "photo": "C:/Users/ABOBA/Desktop/dist/src/Untitled.png",
+            "name": "abe",
+            "age": "2"
+        }
+
+    ]
+
+}
