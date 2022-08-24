@@ -1,62 +1,27 @@
-// import { json } from "body-parser";
-// import { create } from "domain";
-// import { application, response } from "express";
-// import { request } from "http";
 
-
-console.log('jeb');
-
-window.addEventListener("DOMContentLoaded", () =>{
-
-function req(){
-    const request = new XMLHttpRequest()
-    request.open("GET","db.json"),
-    request.setRequestHeader("Content-type", "application/json; charset=utf-8")
-    request.send();
-    request.addEventListener("load", function(){
-        if (request.status == 200){
-            let data = JSON.parse(request.response);
-            console.log(data);
-            
-            data.forEach(item => {
-                let card =document.createElement('div')
-                card.classList.add('card');
-
-                card.innerHTML =`
-                        <img src="${item.photo}" width="40px" alt="photo>"
-                        <div class="name">${item.name}</div>
-                        <div class="age">${item.age}</div>`;
-                document.querySelector(".app").appendChild(card);
-                
-            });
-        }
-        else {
-            console.error("ne tak");
-        }
-      
+// function f1(){
+//     let a=+document.querySelector('.inp').value;
+//     b=a;
+//     console.log(b);
+//     return b;
     
-    });
-        
-    }
-    req();
+// }
 
-    
+// f1()
 
-    
-    // document.querySelector("button").addEventListener("click", req, {"once":true});
-
-    // function createCards(response){
-    //     response.forEach(item=>{
-    //         let card = document.createElement('div');
-
-    //         card.classList.add('card');
-
-    //         let icon;response
-    //     })
-    // }
-
-
-})
-
+fetch ('https://63054b1b697408f7edc49ae4.mockapi.io/tasks', {
+    method:'POST',
+    headers:{
+        'Content-type': 'application/json'
+    },
+    body: JSON.stringify({
+    name: 'sds'
+})})
+.then(res=>res.json())
+.then(data=>document.getElementById('root').innerHTML= JSON.stringify(data))
+.catch(error =>{console.log(error)})
+// fetch ("https://63054b1b697408f7edc49ae4.mockapi.io/tasks")
+// .then(res => res.json())
+// .then(data => document.getElementById('root').innerHTML= JSON.stringify(data))
 
 
