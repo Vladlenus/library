@@ -20,7 +20,7 @@ function n1(){
 }
 
 function f2(){
-fetch ('http://63054b1b697408f7edc49ae4.mockapi.io/tasks',{
+fetch ('https://63054b1b697408f7edc49ae4.mockapi.io/tasks',{
     method:'POST',
     headers:{
         'Content-type': 'application/json'
